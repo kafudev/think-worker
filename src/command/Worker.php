@@ -87,6 +87,7 @@ class Worker extends Command
 
         // 开启守护进程模式
         if ($this->input->hasOption('daemon')) {
+            $this->config['daemonize'] = true;
             $worker->setStaticOption('daemonize', true);
         }
 
